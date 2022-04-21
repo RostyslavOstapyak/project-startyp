@@ -1,17 +1,12 @@
 import './BaseTemplate.css';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-
-const BaseTemplate = ({textProp}) => {
-    return (
-        <div className='container'>
-            {textProp}
-        </div>
-    );
-};
-
-BaseTemplate.prototype = {
-    textProp: PropTypes.string
+function BaseTemplate({ textProp }) {
+  return <div className="container">{textProp}</div>;
 }
+
+BaseTemplate.propTypes = {
+  textProp: PropTypes.string.isRequired,
+};
 
 export default BaseTemplate;
